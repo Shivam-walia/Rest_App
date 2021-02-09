@@ -1,5 +1,5 @@
 Flask==1.0.2
 flask_restplus==0.13.0
-~pencv_python==3.4.2.16
+opencv_python==3.4.2.16
 pyserial==3.5
 gunicorn
