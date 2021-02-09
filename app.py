@@ -31,7 +31,7 @@ callib=4
 
         
 @api.route("/Radio5")
-class Radio5μm(Resource):
+class Radio5m(Resource):
     def get(self):
         global ST
         Radio5=Stepsize(0.05)
