@@ -15,19 +15,18 @@ import datetime
 import math
 
 
-#%%
 
 MyApp=Flask(__name__)
 api=Api(MyApp)
 
-#%%
+
 capture=cv2.VideoCapture(0)
 ST=0.1
 Slide=1
 callib=4
 
 
-        
+   
 @api.route("/Radio5")
 class Radio5m(Resource):
     def get(self):
@@ -35,7 +34,7 @@ class Radio5m(Resource):
         Radio5=Stepsize(0.05)
         ST=Radio5
         return ("Radio 5μm [[Info]]:Step Size Button  "+str(ST)+"Button Is Pressed")
-"""*************Establishing Connection to start processing*****************"""
+
 
 @api.route('/Connect')
 class Connect(Resource):
@@ -70,8 +69,7 @@ class Connect(Resource):
         return ("Success", ser.name),200
             
         
-
-#%%  
+  
 if __name__=='__main__':
     MyApp.run(debug=True)
         
