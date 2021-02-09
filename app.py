@@ -28,6 +28,15 @@ ST=0.1
 Slide=1
 callib=4
 
+
+        
+@api.route("/Radio5")
+class Radio5μm(Resource):
+    def get(self):
+        global ST
+        Radio5=Stepsize(0.05)
+        ST=Radio5
+        return ("Radio 5μm [[Info]]:Step Size Button  "+str(ST)+"Button Is Pressed")
 """*************Establishing Connection to start processing*****************"""
 
 @api.route('/Connect')
@@ -66,7 +75,7 @@ class Connect(Resource):
 
 #%%  
 if __name__=='__main__':
-    MyApp.run("0.0.0.0","8086",debug=True)
+    MyApp.run(debug=True)
         
         
         
