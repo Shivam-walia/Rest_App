@@ -18,9 +18,7 @@ import math
 #%%
 
 MyApp=Flask(__name__)
-blueprint=Blueprint('api',__name__,url_prefix='/api')
-api=Api(blueprint,doc='/documentation')
-MyApp.register_blueprint(blueprint)
+api=Api(MyApp)
 
 #%%
 capture=cv2.VideoCapture(0)
