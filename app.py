@@ -1,4 +1,4 @@
-from flask_restplus import Api,Resource,
+from flask_restplus import Api,Resource
 from flask import Flask
 
 MyApp=Flask(__name__)
